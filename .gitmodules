@@ -1,0 +1,15 @@
+[submodule "src/fonts/nanum-square"]
+	path = src/fonts/nanum-square
+	url = https://github.com/fly-light/NanumSquare.git
+[submodule "src/fonts/nanum-barun-gothic"]
+	path = src/fonts/nanum-barun-gothic
+	url = https://github.com/hiun/NanumBarunGothic.git
+[submodule "src/fonts/fira-code"]
+	path = src/fonts/fira-code
+	url = https://github.com/tonsky/FiraCode.git
+[submodule "src/fonts/d2-coding"]
+	path = src/fonts/d2-coding
+	url = https://github.com/Joungkyun/font-d2coding.git
+[submodule "src/fonts/roboto"]
+	path = src/fonts/roboto
+	url = https://github.com/choffmeister/roboto-fontface-bower.git

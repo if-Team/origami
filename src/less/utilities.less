@@ -1,0 +1,50 @@
+/* Clears shit */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* Hides shit */
+.hidden {
+	text-indent: -9999px;
+	visibility: hidden;
+	display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+	position: relative;
+	width: 80%;
+	max-width: 710px;
+	margin: 0 auto;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Wraps the main content & footer */
+.site-wrapper {
+	position: absolute;
+	z-index: 10;
+	left: 240px;
+	right: 0;
+	min-height: 100%;
+	background: #fff;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+
+body.nav-opened .site-wrapper {
+	overflow-x: hidden;
+	-webkit-transform: translate3D(-240px, 0, 0);
+	-ms-transform: translate3D(-240px, 0, 0);
+	transform: translate3D(-240px, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s ease;
+	transition: transform 0.3s ease;
+}
