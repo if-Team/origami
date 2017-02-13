@@ -175,7 +175,11 @@
 	line-height: 35px;
 	border-radius: 100%;
 	background: #fff;
-	transition: all ease 0.3s;
+	transition: all ease 0.5s;
+	&:hover {
+		border-radius: 5px;
+		color: @foreground !important;
+	}
 }
 .subscribe-button:before {
 	font-size: 9px;
@@ -288,6 +292,17 @@
 	margin-bottom: 20px;
 	padding: 25px;
 	word-wrap: break-word;
+	opacity: 0;
+
+	animation-fill-mode: forwards;
+	transform-style: preserve-3d;
+	transform-origin: 0% 0%;
+	transform: rotateX(-90deg);
+
+	-webkit-animation-fill-mode: forwards;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-90deg);
 }
 
 body:not(.post-template) .post-title {
@@ -303,6 +318,14 @@ body.page-template .post-title {
 	text-decoration: none;
 }
 
+.post-divider {
+	width: 80px;
+	height: 10px;
+	background: @button-color;
+	margin: 0;
+	margin-bottom: 1em;
+}
+
 .post-excerpt p {
 	margin: 0;
 	font-size: 0.9em;
@@ -316,7 +339,7 @@ body.page-template .post-title {
 	font-weight: bolder;
 	font-size: 10px;
 	border: 5px solid @button-color;
-	margin-top: 10px;
+	margin-top: 30px;
 	padding: 0 15px;
 	will-change: background, color, transform, border-color;
 	transition: background .5s, color .5s, transform .5s, border .5s;
@@ -324,19 +347,13 @@ body.page-template .post-title {
 	-moz-transition: background .5s, color .5s, -moz-transform .5s, border .5s;
 	-o-transition: background .5s, color .5s, -o-transform .5s, border .5s;
 
-	transform: skew(20deg);
-	-webkit-transform: skew(20deg);
-	-moz-transform: skew(20deg);
-	-o-transform: skew(20deg);
+	.skew(20deg);
 
 	&:after {
 		content: 'Read More';
 		display: block;
-		
-		transform: skew(-20deg);
-		-webkit-transform: skew(-20deg);
-		-moz-transform: skew(-20deg);
-		-o-transform: skew(-20deg);
+
+		.skew(-20deg);
 
 		text-transform: uppercase;
 		will-change: transform;
@@ -348,16 +365,10 @@ body.page-template .post-title {
 		border-color: @button-color;
 		color: #fff;
 
-		transform: initial;
-		-webkit-transform: initial;
-		-moz-transform: initial;
-		-o-transform: initial;
+		.skew(0deg);
 
 		&:after {
-			transform: initial;
-			-webkit-transform: initial;
-			-moz-transform: initial;
-			-o-transform: initial;
+			.skew(0deg);
 		}
 	}
 }
