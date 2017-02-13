@@ -4,3 +4,52 @@
 @import "../fonts/nanum-barun-gothic/nanumbarungothic.css";
 @import "../fonts/nanum-square/NanumSquare.css";
 @import "../fonts/roboto/css/roboto-slab/roboto-slab-fontface.css";
+
+/* Apply these base styles to all icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "casper-icons", "Open Sans", sans-serif;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	text-decoration: none !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Each icon is created by inserting the correct character into the
+content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+	content: "\f600";
+}
+.icon-feed:before {
+	content: "\f601";
+}
+.icon-twitter:before {
+	content: "\f602";
+	font-size: 1.1em;
+}
+.icon-google-plus:before {
+	content: "\f603";
+}
+.icon-facebook:before {
+	content: "\f604";
+}
+.icon-arrow-left:before {
+	content: "\f605";
+}
+.icon-stats:before {
+	content: "\f606";
+}
+.icon-location:before {
+	content: "\f607";
+	margin-left: -3px; /* Tracking fix */
+}
+.icon-link:before {
+	content: "\f608";
+}
+.icon-menu:before {
+	content: "\f609";
+}

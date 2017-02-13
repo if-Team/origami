@@ -46,7 +46,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
-    "jquery": "^3.1.1",
+    "masonry-layout": "^4.1.1",
     "vanilla-fitvids": "^1.1.0"
   }
 }

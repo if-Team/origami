@@ -49,10 +49,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new ExtractTextPlugin('origami.bundle.css'),
-		new webpack.ProvidePlugin({
-			"jQuery": "jquery"
-		})
+		new ExtractTextPlugin('origami.bundle.css')
 	],
 	devtool: '#eval-source-map'
 };
