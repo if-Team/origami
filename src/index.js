@@ -1,11 +1,19 @@
 import "./index.less";
-import "./js/casper.js";
+
 import Promise from 'promise-polyfill';
 if (!window.Promise) {
 	window.Promise = Promise;
 }
 
 import "whatwg-fetch";
+import fitvids from "fitvids";
+
+import App from './App.vue';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import routes from './js/routes.js';
+
+Vue.use(VueRouter);
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -37,7 +45,24 @@ const nextPage = () => {
 	url += `/page/${origamiPagination.pagination}`;
 
 	//fetch(ghost.url.api('posts'))
-	fetch
+	//fetch
 };
 
+if($('#origami-app')){
+	const router = new VueRouter({
+		mode: 'history',
+		base: __dirname,
+		routes
+	});
+
+	const app = new Vue({
+		el: '#app',
+		router,
+		render(h){
+			return h(App);
+		}
+	});
+}
+
 animatePosts($$('article[data-grid]'));
+fitvids('.post-content');

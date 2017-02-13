@@ -14,6 +14,21 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test:/\.vue$/,
+				loader: 'vue-loader',
+				options: {
+					loaders: {
+						'less': ExtractTextPlugin.extract({
+							loader: [
+								'css-loader',
+								'less-loader'
+							],
+							fallbackLoader: 'vue-style-loader'
+						})
+					}
+				}
+			},
+			{
 				test: /\.js$/,
 				loader: 'babel-loader',
 				query: {
@@ -28,14 +43,14 @@ module.exports = {
 						'css-loader',
 						'less-loader'
 					],
-					fallback: 'style-loader'
+					fallback: 'vue-style-loader'
 				})
 			},
 			{
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract({
 					use: 'css-loader',
-					fallback: 'style-loader'
+					fallback: 'vue-style-loader'
 				})
 			},
 			{

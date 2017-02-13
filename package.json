@@ -42,13 +42,17 @@
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.1",
+    "vue-loader": "^10.3.0",
+    "vue-template-compiler": "^2.1.10",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "fitvids": "^2.0.0",
     "masonry-layout": "^4.1.1",
     "promise-polyfill": "^6.0.2",
-    "vanilla-fitvids": "^1.1.0",
+    "vue": "^2.1.10",
+    "vue-router": "^2.2.0",
     "whatwg-fetch": "^2.0.2"
   }
 }
