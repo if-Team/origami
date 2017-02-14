@@ -145,4 +145,35 @@
 		border-left: none;
 	}
 
+	.hide-on-tablet-down {
+		display: none;
+	}
+
+	.left-on-tablet-down {
+		left: -360px;
+		transition: left .5s ease;
+		z-index: 11;
+	}
+
+	.nav-opened{
+		.left-on-tablet-down {
+			left: 0;
+			z-index: 999;
+		}
+
+		.body-opacity {
+			opacity: 0.7;
+			visibility: visible;
+			z-index: 500;
+		}
+	}
+
+	.show-on-tablet-up {
+		display: block;
+	}
+
+	.site-wrapper {
+		left: 0;
+	}
+
 }

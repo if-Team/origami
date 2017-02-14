@@ -1,66 +1,68 @@
 /* The main wrapper for our pagination links */
 .pagination {
 	position: relative;
-	width: 80%;
-	max-width: 710px;
 	margin: 4rem auto;
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.3rem;
-	color: #9EABB3;
+	background: @background-tip;
+	height: 200px;
 	text-align: center;
 }
 
-.pagination a {
-	color: #9EABB3;
-	transition: all 0.2s ease;
-}
-
-/* Push the previous/next links out to the left/right */
-.older-posts,
-.newer-posts {
-	position: absolute;
-	display: inline-block;
-	padding: 0 15px;
-	border: #bfc8cd 1px solid;
+.pagination-wrapper {
+	display: block;
+	font-size: 3rem;
 	text-decoration: none;
-	border-radius: 4px;
-	transition: border 0.3s ease;
-}
+	position: relative;
+	padding: 12px;
+	height: 60px;
+	width: 100px;
+	margin: 6px auto;
+	top: 80px;
 
-.older-posts {
-	right: 0;
+	&:before, &:after {
+		content: '';
+		background: @background;
+		width: 62px;
+		height: 60px;
+		position: absolute;
+		top: 0;
+		transition: all .5s ease;
+	}
+
+	&:before {
+		left: 0;
+		.skew(0deg, 20deg);
+	}
+
+	&:after {
+		right: 0;
+		.skew(0deg, -20deg);
+	}
+
+	&:hover {
+		&:after, &:before {
+			background: @foreground;
+		}
+	}
 }
 
 .page-number {
 	display: inline-block;
+	position: relative;
 	padding: 2px 0;
 	min-width: 100px;
+	color: @post-background;
+	font-family: @font-title;
+	font-size: 15px;
+	z-index: 22;
 }
 
-.newer-posts {
-	left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
+.older-posts:hover {
 	color: #889093;
-	border-color: #98a0a4;
-}
-
-.extra-pagination {
-	display: none;
-}
-
-.extra-pagination .pagination {
-	width: auto;
 }
 
 /* On page2+ make all the headers smaller */
 .paged .main-header {
 	max-height: 30vh;
-}
-
-/* On page2+ show extra pagination controls at the top of post list */
-.paged .extra-pagination {
-	display: block;
 }

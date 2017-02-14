@@ -45,8 +45,16 @@
 }
 
 .skew(@angle){
-	transform: skew(@angle);
-	-webkit-transform: skew(@angle);
-	-moz-transform: skew(@angle);
-	-o-transform: skew(@angle);
+	.skew(@angle, 0);
+}
+
+.skew(@angle, @angle2){
+	transform: skew(@angle, @angle2);
+	-webkit-transform: skew(@angle, @angle2);
+	-moz-transform: skew(@angle, @angle2);
+	-o-transform: skew(@angle, @angle2);
+}
+
+.show-on-tablet-up {
+	display: none;
 }

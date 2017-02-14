@@ -1,43 +1,45 @@
+//Stylesheets
 import "./index.less";
-import "./js/casper.js";
+
+//Polyfills
 import Promise from 'promise-polyfill';
 if (!window.Promise) {
 	window.Promise = Promise;
 }
-
 import "whatwg-fetch";
+
+//Vue
+import Vue from "vue";
+import App from "./App.vue";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const animatePosts = (posts) => {
-	let previousDelay = [0, 0];
-
-	posts.forEach((v) => {
-		const i = parseInt(v.getAttribute('data-grid-index'));
-		const delay = 0.4 + Math.random() / 2;
-		v.style.animationDuration = delay + "s";
-		v.style.webkitAnimationDuration = delay + "s";
-		v.style.animationDelay = previousDelay[i % 2] + "s";
-		v.style.webkitAnimationDelay = previousDelay[i % 2] + "s";
-		v.style.animationName = "flip";
-		v.style.webkitAnimationName = "flip";
-		previousDelay[i % 2] += delay;
+if($('#origami-posts')){
+	new Vue({
+		el: '#origami-posts',
+		render(h){
+			return h(App);
+		}
 	});
+}
+
+const toggleClass = (el, className) => {
+	if(el.classList.contains(className))
+		el.classList.remove(className);
+	else
+		el.classList.add(className);
+
 };
 
-const nextPage = () => {
-	if(!window.origamiPagination) return;
-	let url = '';
-
-	if(origamiPagination.context !== 'index'){
-		url = `/${origamiPagination.context}/${origamiPagination.data}`;
-	}
-
-	url += `/page/${origamiPagination.pagination}`;
-
-	//fetch(ghost.url.api('posts'))
-	fetch
+const toggleMenu = () => {
+	toggleClass(document.body, 'nav-opened');
 };
 
-animatePosts($$('article[data-grid]'));
+if($('.menu-button')){
+	$('.menu-button').addEventListener('click', toggleMenu);
+}
+
+if($('.body-opacity')){
+	$('.body-opacity').addEventListener('click', toggleMenu);
+}
