@@ -36,10 +36,6 @@ const toggleMenu = () => {
 	toggleClass(document.body, 'nav-opened');
 };
 
-if($('.menu-button')){
-	$('.menu-button').addEventListener('click', toggleMenu);
-}
-
-if($('.body-opacity')){
-	$('.body-opacity').addEventListener('click', toggleMenu);
-}
+[$('.menu-button'), $('.body-opacity'), $('.nav-closer')].forEach((v) => {
+	v.addEventListener('click', toggleMenu);
+});

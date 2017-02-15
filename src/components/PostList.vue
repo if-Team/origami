@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="post-list">
-			<div class="post-column">
+			<div class="post-column" v-if="!tablet">
 				<template v-for="post in previousLeft">
 					<post
 						v-if="post"
@@ -16,7 +16,7 @@
 				</template>
 			</div>
 
-			<div class="post-column">
+			<div class="post-column" v-if="!tablet">
 				<template v-for="post in previousRight">
 					<post
 						v-if="post"
@@ -28,6 +28,21 @@
 						:date="new Date(post.published_at)"
 						:index="post.index">
 					</post>
+				</template>
+			</div>
+
+			<div class="post-column full-column" v-if="tablet">
+				<template v-for="post in posts">
+						<post
+							v-if="post"
+							:title="post.title"
+							:slug="post.slug"
+							:excerpt="post.excerpt"
+							:author="post.author"
+							:tags="post.tags"
+							:date="new Date(post.published_at)"
+							:index="post.index">
+						</post>
 				</template>
 			</div>
 		</div>
@@ -61,7 +76,8 @@
 				pagination: 0,
 				pages: 1,
 				previousLeft: [],
-				previousRight: []
+				previousRight: [],
+				tablet: false
 			};
 		},
 
@@ -79,12 +95,28 @@
 			}
 		},
 
+		/*computed: {
+			tablet(){
+				return window.innerWidth <= 900;
+			}
+		},*/
+
 		mounted(){
 			fitvids(".post-content");
 			this.nextPage();
+
+			window.addEventListener('resize', () => {
+				this.recalculateTablet();
+			});
+
+			this.recalculateTablet();
 		},
 
 		methods: {
+			recalculateTablet(){
+				this.tablet = window.innerWidth <= 900;
+			},
+
 			recalculate(){
 				let leftHeight = 0;
 				let rightHeight = 0;
