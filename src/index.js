@@ -54,4 +54,4 @@ new Clipboard('[data-origami-link]', {
 
 		return resolveUrl(trigger.getAttribute('data-origami-link'));
 	}
-})
+});

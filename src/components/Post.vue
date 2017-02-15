@@ -5,7 +5,7 @@
 		</header>
 		<hr class="post-divider">
 		<template v-if="image">
-			<div class="post-image">
+			<div :class="imageClass" @mouseover="mouseover" @mouseout="mouseout">
 				<div class="post-image-filter" :style="imageStyle"></div>
 				<div class="post-image-indicator">
 					<div class="post-image-indicator-shape"></div>
@@ -116,6 +116,10 @@
 
 			imageStyle(){
 				return `background-image: url("${this.image}")`;
+			},
+
+			imageClass(){
+				return `post-image${this.hover ? ' hover' : ''}`;
 			}
 		},
 		mounted() {
@@ -125,6 +129,20 @@
 			this.$el.style.webkitAnimationDelay = this.index / 2 + "s";
 			this.$el.style.animationName = "flip";
 			this.$el.style.webkitAnimationName = "flip";
+		},
+		methods: {
+			mouseover(){
+				this.hover = true;
+			},
+
+			mouseout(){
+				this.hover = false;
+			}
+		},
+		data(){
+			return {
+				hover: false
+			};
 		},
 		components: {
 			Author,

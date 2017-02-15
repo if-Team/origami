@@ -239,6 +239,10 @@
 	//margin-right: 6px;
 }
 
+.crawler-links-layer {
+	display: none;
+}
+
 /* Appears in the top left corner of your home page */
 .blog-logo {
 	display: block;
@@ -526,10 +530,12 @@
 		-webkit-transition: -webkit-filter .5s;
 
 		will-change: filter;
+	}
 
-		&:hover {
-			.blur(3px);
-		}
+	&:hover .post-image-filter,
+	.post-image-filter:hover,
+	.post-image.hover .post-image-filter {
+		.blur(3px);
 	}
 
 	.mobile-image-tools {
