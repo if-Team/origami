@@ -8,7 +8,7 @@ html {
 body {
 	height: 100%;
 	max-height: 100%;
-	font-family: "Merriweather", serif;
+	font-family: @font-content, serif;
 	letter-spacing: 0.01rem;
 	font-size: 1.8rem;
 	line-height: 1.75em;
@@ -27,6 +27,55 @@ body {
 	background: #D6EDFF;
 }
 
+::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+}
+
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: @foreground;
+	border: none;
+	border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: lighten(@foreground, 10%);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: lighten(@foreground, 5%);
+}
+
+::-webkit-scrollbar-track {
+	background: #303030;
+	border: none;
+	border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:active {
+	background: darken(#303030, 10%);
+}
+
+::-webkit-scrollbar-corner {
+	background: #303030;
+}
+
+* {
+	scrollbar-arrow-color: @foreground;
+	scrollbar-base-color: #303030;
+	scrollbar-track-color: #303030;
+	scrollbar-face-color: @foreground;
+	scrollbar-highlight-color: #303030;
+	scrollbar-3dlight-color: #303030;
+	scrollbar-darkshadow-color: #303030;
+	scrollbar-shadow-color: @foreground;
+}
+
 h1, h2, h3,
 h4, h5, h6 {
 	-webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -35,7 +84,7 @@ h4, h5, h6 {
 	color: #2E2E2E;
 	line-height: 1.15em;
 	margin: 0 0 0.4em 0;
-	font-family: "Open Sans", sans-serif;
+	font-family: @font-title;
 	text-rendering: geometricPrecision;
 }
 
@@ -166,7 +215,7 @@ mark {
 
 code, tt {
 	padding: 1px 3px;
-	font-family: Inconsolata, monospace, sans-serif;
+	font-family: @font-code;
 	font-size: 0.85em;
 	white-space: pre-wrap;
 	border: #E3EDF3 1px solid;
@@ -184,7 +233,7 @@ pre {
 	border: #E3EDF3 1px solid;
 	width: 100%;
 	padding: 10px;
-	font-family: Inconsolata, monospace, sans-serif;
+	font-family: @font-code;
 	font-size: 0.9em;
 	white-space: pre;
 	overflow: auto;
@@ -214,6 +263,10 @@ kbd {
 	box-shadow:
 	0 1px 0 rgba(0, 0, 0, 0.2),
 	0 1px 0 0 #fff inset;
+}
+
+code, kbd, pre, samp {
+	font-family: @font-code;
 }
 
 table {
@@ -275,7 +328,7 @@ textarea, select, input {
 	padding: 6px 9px;
 	margin: 0 0 5px 0;
 	outline: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: @font-content, sans-serif;
 	font-size: 1.6rem;
 	font-weight: 100;
 	line-height: 1.4em;
@@ -329,7 +382,7 @@ button {
 	outline: none;
 	text-decoration: none;
 	color: #fff;
-	font-family: 'Open Sans', sans-serif;
+	font-family: @font-title;
 	font-size: 11px; /* Hacks targeting Firefox. */
 	line-height: 13px; /* Hacks targeting Firefox. */
 	font-weight: 300;

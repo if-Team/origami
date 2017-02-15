@@ -1,0 +1,23 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		/*<![CDATA[*/
+		.upside {
+			fill: #2196f3;
+		}
+		
+		.downside {
+			fill: #03a9f4;
+		}
+		/*]]>*/
+	</style>
+	
+	<g class="upside">
+		<path d="M64,128 L64,256 L128,192"/>
+		<path d="M320,192 L320,0 L512,0"/>
+	</g>
+	
+	<g class="downside">
+		<path d="M320,0 L64,256 L320,512"/>
+		<path d="M64,128 L64,192 L0,192"/>
+	</g>
+</svg>

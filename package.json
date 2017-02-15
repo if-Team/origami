@@ -51,6 +51,7 @@
     "downsize": "0.0.8",
     "fitvids": "^2.0.0",
     "mdi": "^1.8.36",
+    "prismjs": "^1.6.0",
     "promise-polyfill": "^6.0.2",
     "resolve-url": "^0.2.1",
     "vue": "^2.1.10",

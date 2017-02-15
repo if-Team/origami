@@ -15,6 +15,7 @@ import App from "./App.vue";
 //Libraries
 import Clipboard from "clipboard";
 import resolveUrl from "resolve-url";
+import "prismjs";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);

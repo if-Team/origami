@@ -1,3 +1,5 @@
+@import "~prismjs/themes/prism-okaidia.css";
+
 /* Big cover image on the home page */
 .main-header {
 	//position: absolute;
@@ -220,7 +222,7 @@
 	color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
 	text-align: center;
 	font-size: 12px;
-	font-family: "Open Sans", sans-serif;
+	font-family: @font-title;
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 35px;
@@ -275,7 +277,7 @@
 	font-size: 5rem;
 	letter-spacing: -1px;
 	font-weight: 700;
-	font-family: "Open Sans", sans-serif;
+	font-family: @font-title;
 	color: #fff;
 }
 
@@ -284,7 +286,7 @@
 	font-size: 2rem;
 	line-height: 1.5em;
 	font-weight: 400;
-	font-family: "Merriweather", serif;
+	font-family: @font-content;
 	letter-spacing: 0.01rem;
 	color: rgba(255,255,255,0.8);
 }
@@ -633,7 +635,7 @@ body.page-template .post-title {
 .post-meta {
 	display: block;
 	margin: 1.75rem 0 0 0;
-	font-family: "Open Sans", sans-serif;
+	font-family: @font-content;
 	font-size: 1.5rem;
 	line-height: 2.2rem;
 	color: #9EABB3;
