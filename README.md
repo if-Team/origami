@@ -10,7 +10,7 @@ To apply this theme, you should turn on public api setting in labs.
 
 ## [Preview](https://blog.khinenw.tk)
 ### Desktop
-![](/resources/origami-screenshot.png)
+![Desktop Preview](/resources/origami-screenshot.png)
 ### Mobile  
 ![Mobile Preview](/resources/origami-screenshot-mobile.png)
 
