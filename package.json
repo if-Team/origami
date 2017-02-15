@@ -47,9 +47,12 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "clipboard": "^1.6.0",
     "downsize": "0.0.8",
     "fitvids": "^2.0.0",
+    "mdi": "^1.8.36",
     "promise-polyfill": "^6.0.2",
+    "resolve-url": "^0.2.1",
     "vue": "^2.1.10",
     "whatwg-fetch": "^2.0.2"
   }

@@ -4,6 +4,34 @@
 			<h2 class="post-title"><a :href="url">{{title}}</a></h2>
 		</header>
 		<hr class="post-divider">
+		<template v-if="image">
+			<div class="post-image">
+				<div class="post-image-filter" :style="imageStyle"></div>
+				<div class="post-image-indicator">
+					<div class="post-image-indicator-shape"></div>
+					<div class="post-image-indicator-buttons">
+						<a class="mdi mdi-link force-link" :data-origami-link="url"></a>
+						<a class="mdi mdi-file-document" :href="url"></a>
+					</div>
+				</div>
+				<div class="post-image-download">
+					<a class="mdi mdi-download" download target="_blank" :href="image">
+						download
+					</a>
+				</div>
+				<div class="post-image-original">
+					<a class="mdi mdi-image" target="_blank" :href="image">
+						original
+					</a>
+				</div>
+				<div class="mobile-image-tools">
+					<a class="mdi mdi-download" download target="_blank" :href="image"></a>
+					<a class="mdi mdi-image" target="_blank" :href="image"></a>
+					<a class="mdi mdi-link force-link" :data-origami-link="url"></a>
+					<a class="mdi mdi-file-document" :href="url"></a>
+				</div>
+			</div>
+		</template>
 		<section class="post-excerpt">
 			<p>{{excerpt}}</p>
 		</section>
@@ -52,6 +80,7 @@
 				type: String,
 				required: true
 			},
+			image: {},
 			excerpt: {
 				type: String,
 				required: true
@@ -83,6 +112,10 @@
 
 			url(){
 				return `/${this.slug}`;
+			},
+
+			imageStyle(){
+				return `background-image: url("${this.image}")`;
 			}
 		},
 		mounted() {

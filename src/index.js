@@ -12,6 +12,10 @@ import "whatwg-fetch";
 import Vue from "vue";
 import App from "./App.vue";
 
+//Libraries
+import Clipboard from "clipboard";
+import resolveUrl from "resolve-url";
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -37,5 +41,16 @@ const toggleMenu = () => {
 };
 
 [$('.menu-button'), $('.body-opacity'), $('.nav-closer')].forEach((v) => {
-	v.addEventListener('click', toggleMenu);
+	v.addEventListener('click', toggleMenu, false);
 });
+
+new Clipboard('[data-origami-link]', {
+	text: (trigger) => {
+		$('#clip-notifier').classList.remove("running");
+		setTimeout(() => {
+			$('#clip-notifier').classList.add("running");
+		}, 10);
+
+		return resolveUrl(trigger.getAttribute('data-origami-link'));
+	}
+})

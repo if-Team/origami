@@ -9,6 +9,7 @@
 						:slug="post.slug"
 						:excerpt="post.excerpt"
 						:author="post.author"
+						:image="post.image"
 						:tags="post.tags"
 						:date="new Date(post.published_at)"
 						:index="post.index">
@@ -24,6 +25,7 @@
 						:slug="post.slug"
 						:excerpt="post.excerpt"
 						:author="post.author"
+						:image="post.image"
 						:tags="post.tags"
 						:date="new Date(post.published_at)"
 						:index="post.index">
@@ -39,6 +41,7 @@
 							:slug="post.slug"
 							:excerpt="post.excerpt"
 							:author="post.author"
+							:image="post.image"
 							:tags="post.tags"
 							:date="new Date(post.published_at)"
 							:index="post.index">
@@ -54,6 +57,8 @@
 			:context-data="contextData"
 			:load-next="nextPage">
 		</pagination>
+		
+		<div id="clip-notifier">Copied to clipboard!</div>
 	</div>
 </template>
 

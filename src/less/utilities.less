@@ -55,6 +55,31 @@
 	-o-transform: skew(@angle, @angle2);
 }
 
-.show-on-tablet-up {
+.blur(@r){
+	filter: blur(@r);
+	-o-filter: blur(@r);
+	-moz-filter: blur(@r);
+	-webkit-filter: blur(@r);
+}
+
+.centerize{
+	transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.skew-n-centerize(@angle, @angle2){
+	transform: translate(-50%, -50%) skew(@angle, @angle2);
+	-webkit-transform: translate(-50%, -50%) skew(@angle, @angle2);
+	-moz-transform: translate(-50%, -50%) skew(@angle, @angle2);
+	-o-transform: translate(-50%, -50%) skew(@angle, @angle2);
+}
+
+.show-on-tablet-down {
 	display: none;
+}
+
+.force-link {
+	cursor: pointer;
 }
