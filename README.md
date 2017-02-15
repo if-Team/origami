@@ -1,5 +1,5 @@
 # Origami
-![Origami Logo](/resources/origami-logo.svg)
+![Origami Logo](/resources/origami-logo.png)
 
 ----
 Origami: A fancy ghost theme.
