@@ -37,11 +37,17 @@
 		</section>
 		<a class="read-more" :href="url"></a>
 		<footer class="post-meta">
+			<div v-if="tags.length > 0" class="post-tags">
+				<div class="tags-indicator">
+					<span class="mdi mdi-label"></span>
+				</div>
+
+				<div class="post-tag tags-indicator-desktop">
+					<span class="mdi mdi-checkbox-blank-circle-outline"></span>
+				</div>
+				<tag v-for="tag in tags" :slug="tag.slug" :name="tag.name" :image="tag.image"></tag>
+			</div>
 			<author :author="author"></author>
-			<template v-if="tags.length > 0">
-				&#20;on&#20;
-				<tag v-for="tag in tags" :slug="tag.slug" :name="tag.name"></tag>
-			</template>
 			<time class="post-date" :datetime="datetime">{{datetext}}</time>
 		</footer>
 	</article>

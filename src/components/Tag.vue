@@ -1,5 +1,8 @@
 <template>
-	<a class="tag" :href="href">{{name}}</a>
+	<div :class="imageClass">
+		<div v-if="image" class="post-tag-image" :style="imageStyle"></div>
+		<a :href="href">{{name}}</a>
+	</div>
 </template>
 
 <script>
@@ -13,12 +16,24 @@
 			name: {
 				type: String,
 				required: true
+			},
+
+			image: {
+				type: String
 			}
 		},
 
 		computed: {
 			href(){
 				return `/tag/${this.slug}`
+			},
+
+			imageStyle(){
+				return `background-image: url("${this.image}");`;
+			},
+
+			imageClass(){
+				return `post-tag${(this.image) ? ' imaged-tag' : ''}`;
 			}
 		}
 	};

@@ -57,7 +57,7 @@
 			:context-data="contextData"
 			:load-next="nextPage">
 		</pagination>
-		
+
 		<div id="clip-notifier">Copied to clipboard!</div>
 	</div>
 </template>
@@ -155,8 +155,8 @@
 				//because it is onlyused when classifing columns.
 
 				let height = 50;
-				height += post.title.length * 3;
 				if(post.image) height += 100;
+				height += Math.floor(post.title.length / (window.innerWidth / 8)) * 30;
 				height += post.excerpt.length * 30 / (window.innerWidth / 8);
 
 				return height;
