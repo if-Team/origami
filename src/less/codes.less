@@ -1,0 +1,29 @@
+pre[class*="language-"] {
+	&:before {
+		content: attr(class) + " ";
+		display: inline-block;
+		background: #16a085;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.for(@language-colors); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color: extract(@value, 2);
+		&.language-@{name}:before {
+			background: @color;
+			color: contrast(@color, @black, @white);
+		}
+	}
+
+	border: none !important;
+	border-radius: 0 !important;
+	position: relative;
+	padding-top: 2em;
+}
+
+pre[class^="language-"]:before {
+	content: attr(class);
+	padding: 0 1em;
+}
