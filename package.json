@@ -2,7 +2,7 @@
   "name": "origami",
   "description": "Origami: a fancy ghost theme",
   "demo": "https://blog.khinenw.tk",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "engines": {
     "ghost": ">=0.9.0 <1.0.0"
   },
