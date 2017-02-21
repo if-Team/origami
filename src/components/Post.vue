@@ -33,7 +33,7 @@
 			</div>
 		</template>
 		<section class="post-excerpt">
-			<p v-html="excerpt"></p>…
+			<p v-html="computedExcerpt"></p>
 		</section>
 		<a class="read-more" :href="url"></a>
 		<footer class="post-meta">
@@ -126,6 +126,10 @@
 
 			imageClass(){
 				return `post-image${this.hover ? ' hover' : ''}`;
+			},
+
+			computedExcerpt(){
+				return `${this.excerpt}…`;
 			}
 		},
 		mounted() {
