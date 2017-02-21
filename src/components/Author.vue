@@ -24,7 +24,7 @@
 			},
 
 			authorName(){
-				return this.author.name
+				return this.author.name;
 			}
 		}
 	}

@@ -24,7 +24,9 @@ module.exports = {
 								'less-loader'
 							],
 							fallback: 'vue-style-loader'
-						})
+						}),
+
+						'js': 'babel-loader?presets[]=latest'
 					}
 				}
 			},
@@ -32,7 +34,7 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel-loader',
 				query: {
-					presets: ['es2015']
+					presets: ['latest']
 				},
 				exclude: /node_modules/
 			},
@@ -70,7 +72,7 @@ module.exports = {
 };
 
 if(process.env.NODE_ENV === 'production'){
-	module.exports.devtool = '#source-map';
+	module.exports.devtool = '';
 	module.exports.plugins = (module.exports.plugins || []).concat([
 		new webpack.DefinePlugin({
 			'process.env': {
