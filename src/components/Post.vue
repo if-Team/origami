@@ -33,7 +33,7 @@
 			</div>
 		</template>
 		<section class="post-excerpt">
-			<p v-html="excerpt"></p>
+			<p v-html="excerpt"></p>…
 		</section>
 		<a class="read-more" :href="url"></a>
 		<footer class="post-meta">
