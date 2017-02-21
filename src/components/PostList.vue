@@ -11,6 +11,7 @@
 						:author="post.author"
 						:image="post.image"
 						:tags="post.tags"
+						:url="post.url"
 						:date="new Date(post.published_at)"
 						:index="post.index">
 					</post>
@@ -27,6 +28,7 @@
 						:author="post.author"
 						:image="post.image"
 						:tags="post.tags"
+						:url="post.url"
 						:date="new Date(post.published_at)"
 						:index="post.index">
 					</post>
@@ -43,6 +45,7 @@
 							:author="post.author"
 							:image="post.image"
 							:tags="post.tags"
+							:url="post.url"
 							:date="new Date(post.published_at)"
 							:index="post.index">
 						</post>

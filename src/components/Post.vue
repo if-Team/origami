@@ -86,6 +86,10 @@
 				type: String,
 				required: true
 			},
+			url: {
+				type: String,
+				required: true
+			},
 			image: {},
 			excerpt: {
 				type: String,
@@ -116,9 +120,9 @@
 				return `${pad2(this.date.getDate())} ${monthString(this.date.getMonth())} ${this.date.getFullYear()}`;
 			},
 
-			url(){
+			/*url(){
 				return `/${this.slug}`;
-			},
+			},*/
 
 			imageStyle(){
 				return `background-image: url("${this.image}")`;
