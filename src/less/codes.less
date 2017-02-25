@@ -1,11 +1,12 @@
 pre[class*="language-"] {
 	&:before {
-		content: attr(class) + " ";
+		content: attr(data-lang);
 		display: inline-block;
 		background: #16a085;
 		position: absolute;
 		top: 0;
 		left: 0;
+		padding: 0 1em;
 	}
 
 	.for(@language-colors); .-each(@value) {
@@ -20,10 +21,9 @@ pre[class*="language-"] {
 	border: none !important;
 	border-radius: 0 !important;
 	position: relative;
-	padding-top: 2em;
+	padding-top: 2em !important;
 }
 
-pre[class^="language-"]:before {
-	content: attr(class);
-	padding: 0 1em;
+.prism-previewer {
+	z-index: 9999;
 }

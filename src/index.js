@@ -15,7 +15,10 @@ import App from "./App.vue";
 //Libraries
 import Clipboard from "clipboard";
 import resolveUrl from "resolve-url";
-import "prismjs";
+
+window.Clipboard = Clipboard;
+
+import "./js/prism.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -54,4 +57,10 @@ new Clipboard('[data-origami-link]', {
 
 		return resolveUrl(trigger.getAttribute('data-origami-link'));
 	}
+});
+
+window.addEventListener('load', () =>{
+	$$('pre[class*="language-"]').forEach((v) => {
+		v.setAttribute('data-lang', v.className.split(' ').find((v) => v.startsWith('language-')))
+	});
 });
