@@ -2,10 +2,11 @@
 import "./index.less";
 
 //Polyfills
-import Promise from 'promise-polyfill';
+/*import Promise from 'promise-polyfill';
 if (!window.Promise) {
 	window.Promise = Promise;
-}
+}*/
+import "babel-polyfill";
 import "whatwg-fetch";
 
 //Vue
@@ -60,7 +61,7 @@ new Clipboard('[data-origami-link]', {
 });
 
 window.addEventListener('load', () =>{
-	$$('pre[class*="language-"]').forEach((v) => {
-		v.setAttribute('data-lang', v.className.split(' ').find((v) => v.startsWith('language-')))
+	Array.prototype.forEach.call($$('pre[class*="language-"]'), (v) => {
+		v.setAttribute('data-lang', v.className.split(' ').find((v) => v.startsWith('language-')));
 	});
 });
