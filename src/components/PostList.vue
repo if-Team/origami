@@ -185,6 +185,8 @@
 						v.index = k;
 						v.excerpt = excerpt(v.html, {words: 26});
 						v.url = resolveUrl(v.url);
+						if(v.image) v.image = resolveUrl(v.image);
+						
 						return v;
 					}));
 					this.recalculate();

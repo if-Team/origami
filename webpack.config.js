@@ -7,7 +7,7 @@ module.exports = {
 
 	output: {
 	  	path: path.resolve(__dirname, 'assets'),
-		publicPath: '/assets/',
+		publicPath: '',
 		filename: 'origami.bundle.js'
 	},
 

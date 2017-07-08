@@ -7,6 +7,7 @@
 </template>
 
 <script>
+	import resolveUrl from "../js/resolve-url";
 	export default {
 		props: {
 			pagination: {
@@ -34,7 +35,7 @@
 			pageUrl(page){
 				let baseUrl = '';
 				if(this.context === 'author' || this.context === 'tag')
-					baseUrl = `/${this.context}/${this.contextData}`;
+					baseUrl = resolveUrl(`/${this.context}/${this.contextData}`);
 
 				if(this.page === 1) return baseUrl;
 				return `${baseUrl}/page/${page}`;

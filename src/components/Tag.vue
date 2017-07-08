@@ -6,6 +6,7 @@
 </template>
 
 <script>
+	import resolveUrl from "../js/resolve-url";
 	export default {
 		props: {
 			slug: {
@@ -25,11 +26,11 @@
 
 		computed: {
 			href(){
-				return `/tag/${this.slug}`
+				return resolveUrl(`/tag/${this.slug}`);
 			},
 
 			imageStyle(){
-				return `background-image: url("${this.image}");`;
+				return `background-image: url("${resolveUrl(this.image)}");`;
 			},
 
 			imageClass(){
