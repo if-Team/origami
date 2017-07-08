@@ -11,10 +11,10 @@
     "build": "webpack"
   },
   "license": "MIT",
-  "author": [
-    "Ghost Foundation",
-    "if-Team"
-  ],
+  "author": {
+    "name": "Khinenw",
+    "email": "deu07115@gmail.com"
+  },
   "gpm": {
     "type": "theme",
     "categories": [
@@ -53,7 +53,6 @@
     "fitvids": "^2.0.0",
     "mdi": "^1.8.36",
     "prismjs": "^1.6.0",
-    "resolve-url": "^0.2.1",
     "vue": "^2.1.10",
     "whatwg-fetch": "^2.0.2"
   }

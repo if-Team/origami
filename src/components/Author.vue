@@ -22,7 +22,11 @@
 			},
 
 			authorImage(){
-				return this.author.image;
+				if(this.author.image){
+					return resolveUrl(this.author.image);
+				}else if(this.author.profile_image) {
+					return resolveUrl(this.author.profile_image);
+				}
 			},
 
 			authorName(){

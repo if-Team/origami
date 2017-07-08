@@ -50,7 +50,7 @@
 
 			<author :author="author"></author>
 			<time class="post-date" :datetime="datetime">{{datetext}}</time>
-			<span class="comment-count" :data-disqus-url="url">No Comments</span>
+			<span class="comment-count" :data-disqus-url="url"></span>
 		</footer>
 	</article>
 </template>

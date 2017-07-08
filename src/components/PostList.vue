@@ -186,7 +186,8 @@
 						v.excerpt = excerpt(v.html, {words: 26});
 						v.url = resolveUrl(v.url);
 						if(v.image) v.image = resolveUrl(v.image);
-						
+						if(v.feature_image) v.image = resolveUrl(v.feature_image);
+
 						return v;
 					}));
 					this.recalculate();

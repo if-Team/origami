@@ -11,7 +11,6 @@ import App from "./App.vue";
 
 //Libraries
 import Clipboard from "clipboard";
-import resolveUrl from "resolve-url";
 
 window.Clipboard = Clipboard;
 
@@ -52,9 +51,10 @@ new Clipboard('[data-origami-link]', {
 			$('#clip-notifier').classList.add("running");
 		}, 10);
 
-		return resolveUrl(trigger.getAttribute('data-origami-link'));
+		return trigger.getAttribute('data-origami-link');
 	}
 });
+
 
 window.addEventListener('load', () =>{
 	Array.prototype.forEach.call($$('pre[class*="language-"]'), (v) => {

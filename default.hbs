@@ -7,7 +7,9 @@
 
 		{{!-- Page Meta --}}
 		<title>{{meta_title}}</title>
-		<meta name="description" content="{{meta_description}}" />
+		{{#if meta_description}}
+			<meta name="description" content="{{meta_description}}" />
+		{{/if}}
 
 		{{!-- Mobile Meta --}}
 		<meta name="HandheldFriendly" content="True" />
