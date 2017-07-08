@@ -6,6 +6,8 @@
 </template>
 
 <script>
+	import resolveUrl from "../js/resolve-url";
+
 	export default {
 		props: {
 			author: {
@@ -16,7 +18,7 @@
 
 		computed: {
 			url(){
-				return "/author/" + this.author.slug;
+				return resolveUrl("/author/" + this.author.slug);
 			},
 
 			authorImage(){

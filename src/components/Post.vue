@@ -47,8 +47,10 @@
 				</div>
 				<tag v-for="tag in tags" :slug="tag.slug" :name="tag.name" :image="tag.image"></tag>
 			</div>
+
 			<author :author="author"></author>
 			<time class="post-date" :datetime="datetime">{{datetext}}</time>
+			<span class="comment-count" :data-disqus-url="url">No Comments</span>
 		</footer>
 	</article>
 </template>

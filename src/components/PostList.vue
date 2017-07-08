@@ -67,6 +67,7 @@
 
 <script>
 	import excerpt from "../js/excerpt.js";
+	import resolveUrl from "../js/resolve-url.js";
 	import fitvids from "fitvids";
 
 	import Pagination from "./Pagination.vue";
@@ -182,7 +183,8 @@
 					this.pages = v.meta.pagination.pages;
 					this.posts.push(...v.posts.map((v, k) => {
 						v.index = k;
-						v.excerpt = excerpt(v.html, {words: 26})
+						v.excerpt = excerpt(v.html, {words: 26});
+						v.url = resolveUrl(v.url);
 						return v;
 					}));
 					this.recalculate();

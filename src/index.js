@@ -2,10 +2,6 @@
 import "./index.less";
 
 //Polyfills
-/*import Promise from 'promise-polyfill';
-if (!window.Promise) {
-	window.Promise = Promise;
-}*/
 import "babel-polyfill";
 import "whatwg-fetch";
 
