@@ -1,6 +1,6 @@
 [submodule "src/fonts/nanum-square"]
 	path = src/fonts/nanum-square
-	url = https://github.com/fly-light/NanumSquare.git
+	url = https://github.com/HelloWorld017/NanumSquare.git
 [submodule "src/fonts/nanum-barun-gothic"]
 	path = src/fonts/nanum-barun-gothic
 	url = https://github.com/hiun/NanumBarunGothic.git
