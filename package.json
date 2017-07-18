@@ -2,9 +2,9 @@
   "name": "origami",
   "description": "Origami: a fancy ghost theme",
   "demo": "https://blog.khinenw.tk",
-  "version": "2.0.0-beta",
+  "version": "2.0.2-beta",
   "engines": {
-    "ghost": ">=0.9.0 <1.0.0"
+    "ghost": ">=1.0.0"
   },
   "scripts": {
     "dev": "webpack --watch",
