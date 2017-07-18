@@ -7,15 +7,11 @@
 {{#author}}
 	<header
 		class="main-header author-head"
-		style="background-image: url({{#if cover}}{{cover}}{{else if cover_image}}{{cover_image}}{{else}}../../ghost/img/user-cover.png{{/if}})">
+		style="background-image: url({{#if cover_image}}{{cover_image}}{{else}}../../ghost/img/user-cover.png{{/if}})">
 	</header>
 
 	<section class="author-profile">
-		{{#if image}}
-		<figure class="author-image">
-			<div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
-		</figure>
-		{{else if profile_image}}
+		{{#if profile_image}}
 		<figure class="author-image">
 			<div class="img" style="background-image: url({{profile_image}})"><span class="hidden">{{name}}'s Picture</span></div>
 		</figure>

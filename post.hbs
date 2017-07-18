@@ -6,8 +6,7 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}"
-	style="background-image: url({{image}}){{else if feature_image}}"
+<header class="main-header post-head {{#if feature_image}}"
 	style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
 </header>
 
@@ -30,11 +29,7 @@
 		{{!-- Everything inside the #author tags pulls data from the author --}}
 		{{#author}}
 
-			{{#if image}}
-			<figure class="author-image">
-				<a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
-			</figure>
-			{{else if profile_image}}
+			{{#if profile_image}}
 			<figure class="author-image">
 				<a class="img" href="{{url}}" style="background-image: url({{profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
 			</figure>
@@ -93,7 +88,7 @@
 {{!-- Links to Previous/Next posts --}}
 <aside class="read-next">
 	{{#next_post}}
-	<a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}" href="{{url}}">
+	<a class="read-next-story {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}" href="{{url}}">
 		<section class="post">
 			<h2>{{title}}</h2>
 			<p>{{excerpt words="19"}}&hellip;</p>
@@ -101,7 +96,7 @@
 	</a>
 	{{/next_post}}
 	{{#prev_post}}
-	<a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}" href="{{url}}">
+	<a class="read-next-story prev {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}" href="{{url}}">
 		<section class="post">
 			<h2>{{title}}</h2>
 			<p>{{excerpt words="19"}}&hellip;</p>
