@@ -1,6 +1,7 @@
 # Origami: _A fancy [ghost](https://ghost.org) theme_
 
 [![Ghost version](https://img.shields.io/badge/Ghost-0.11.x-yellow.svg?style=flat-square)](https://ghost.org/)
+[![Ghost version](https://img.shields.io/badge/Ghost-1.0.x-yellow.svg?style=flat-square)](https://ghost.org/)
 [![Github All Releases](https://img.shields.io/github/downloads/if-Team/origami/total.svg?style=flat-square)](https://github.com/if-Team/origami/releases)
 [![Release Version](https://img.shields.io/github/release/if-Team/origami.svg?style=flat-square)](https://github.com/if-Team/origami/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
