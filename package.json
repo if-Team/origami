@@ -52,7 +52,7 @@
     "downsize": "0.0.8",
     "fitvids": "^2.0.0",
     "mdi": "^1.8.36",
-    "prismjs": "1.6.0",
+    "prismjs": "1.8.3",
     "vue": "^2.1.10",
     "whatwg-fetch": "^2.0.2"
   }
