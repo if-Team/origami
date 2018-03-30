@@ -15,6 +15,7 @@
 ### Use it by cloning
  ```
  $ git clone https://github.com/if-Team/origami.git
+ $ git submodule init
  $ git submodule update --recursive
  $ npm install
  $ npm run build --production
